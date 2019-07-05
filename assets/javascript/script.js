@@ -79,19 +79,19 @@ $(document).ready( () => {
   
   
   
-  var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=mustang&api_key=RlvbFBFttCunUi82u3dfGWd6AKeGCWZ8&limit=5");
+  var xhr = $.get("http://api.giphy.com/v1/gifs/search?       q=mustang&api_key=RlvbFBFttCunUi82u3dfGWd6AKeGCWZ8&limit=5");
     xhr.done(function(data) { 
-//       var image = $("<img>").attr("src", data);
+      var image = $("<img>").attr("src", data.data[0].images.original.url);
 //       console.log(image);
-//        let giphDiv = $("<div class='giphs'>");
-//        giphDiv.append(image)
-//        $(".images").prepend(giphDiv);
+       let giphDiv = $("<div class='giphs'>");
+       giphDiv.append(image)
+       $(".images").prepend(giphDiv);
       
     
       console.log("success got data", data); 
-//       document.getElementsByClassName('images').src= data.data.images.original.url;
+      document.getElementsByClassName('images').src= data.data[0].images.original_url;
       
-      console.log('my data for gilphs', data[0].data.images.original.url);
+      console.log('my data for gilphs', data.data[0].images.original.url);
     });
   
   
