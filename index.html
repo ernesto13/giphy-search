@@ -23,24 +23,26 @@
 
     <!--   inline form   -->
 
-    <form class="form-inline mb-3">
+    <form class="form-inline mb-3 mt-3">
 
 
       <label class="sr-only" for="search-giph">Search Giphy</label>
       <div class="input-group mb-2 mr-sm-2">
 
-        <input type="text" class="form-control" id="search-giph" placeholder="Search Giphy">
+        <input type="text" class="form-control" id="search-giph" placeholder="Search Giphy" required>
+        <input type="number" class="form-control ml-3" id="number-giph" placeholder="# of giphs" required>
       </div>
 
-      <button id="searchGiph" type="submit" class="btn btn-primary mb-2" require>Search</button>
+      <button id="searchGiph" type="submit" class="btn btn-primary mb-2">Search</button>
     </form>
 
 
     <!--  end of form    -->
     <div class="container"> 
       <div class="row">
-  <div class="images col-sm-6">
-
+  <div class="images col-sm-6 text-center">
+  
+      <div class="text-center title"></div>
 
 
     </div>
