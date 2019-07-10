@@ -16,7 +16,7 @@ $(document).ready(() => {
         console.log('title: ' + giphySearch[i].title);
 
 
-        let giphDiv = $("<div class='giphs'>");
+        let giphDiv = $("<div class='giphs card'>");
         giphDiv.prepend(title);
         giphDiv.append(image);
         $(".images").prepend(giphDiv);

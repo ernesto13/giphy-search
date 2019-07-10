@@ -8,7 +8,7 @@ $(document).ready( () => {
       for(let j = 0; j < trendGiphy.length; j++){
         console.log('trend: ', trendGiphy[j]);
         let trendingImage = $("<img class='mb-2'>").attr("src", trendGiphy[j].images.original.url);
-        let trendTitle = 'Trending Now';
+        let trendTitle = $('#trendTitle').html("Trending");
         let giphDiv = $("<div class='giphs'>");
         giphDiv.prepend(trendTitle);
         giphDiv.append(trendingImage);
@@ -18,5 +18,15 @@ $(document).ready( () => {
       });
     }
              
-  trendingGiph();
+//   trendingGiph();
+  
+  
+  
+   let trendGiph = $('#trendingGiphBtn');
+
+  trendGiph.on("click", function() {
+//     e.preventDefault();
+    trendingGiph();
+    
+  });
 });

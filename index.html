@@ -19,42 +19,105 @@
 </head>
 
 <body>
-  <div class="container">
-
-    <!--   inline form   -->
-
-    <form class="form-inline mb-3 mt-3">
+  <!--  navbar  -->
 
 
-      <label class="sr-only" for="search-giph">Search Giphy</label>
-      <div class="input-group mb-2 mr-sm-2">
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Giphy Search</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-        <input type="text" class="form-control" id="search-giph" placeholder="Search Giphy" required>
-        <input type="number" class="form-control ml-3" id="number-giph" placeholder="# of giphs" required>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Get Giphs
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a id="randomGiphBtn" class="dropdown-item" href="#">Random</a>
+            <a id="trendingGiphBtn" class="dropdown-item" href="#">Trending</a>
+            
+          </div>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input type="text" class="form-control mr-2" id="search-giph" placeholder="Search Giphy" required>
+        <input id="number-giph" class="form-control mr-sm-2" type="search" placeholder="# of giphs" aria-label="Search">
+        <button id="searchGiph" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!--  end of navbar  -->
+
+
+
+
+
+  <div class="container mx-auto mt-5">
+
+    <div class="container">
+      <div class="row">
+
+        
+        
+        
+<!--     for search card     -->
+        
+        
+         <div class="card mb-3">
+          <!--   <img id="random" class="card-img-top"> -->
+          <div id="random" class="images text-center h3"></div>
+          <div class="card-body col-sm-8">
+            <h5 class="card-title title text-center"></h5>
+            <!--     <p class="card-text text-center">Random Giph</p> -->
+            <!--     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          </div>
+        </div>
+        
+        
+        
+<!--         <div class="images col-sm-8 text-center">
+
+          <div class="text-center title"></div>
+
+
+        </div> -->
+        
+        
+        
+<!--     end of search card     -->
+        <hr/>
+
+        <!-- for random -->
+        <!--         <div id="random" class="random text-center h3"></div> -->
+        <!--         <div class="random text-center"> -->
+
+
+        <div class="card mb-3">
+          <!--   <img id="random" class="card-img-top"> -->
+          <div id="random" class="random text-center h3"></div>
+          <div class="card-body col-sm-8">
+            <h5 class="card-title random-title text-center"></h5>
+            <!--     <p class="card-text text-center">Random Giph</p> -->
+            <!--     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          </div>
+        </div>
+
+        <hr>
+
+        <!--     for random card end       -->
+
+        <div id="trendTitle" class="trending text-center h3"></div>
+        <div class="trending text-center"></div>
+
+
       </div>
 
-      <button id="searchGiph" type="submit" class="btn btn-primary mb-2">Search</button>
-    </form>
 
-
-    <!--  end of form    -->
-    <div class="container"> 
-      <div class="row">
-        <h1 class="text-center">Trending</h1>
-        <div class="trending text-center">
-        
-        
-        </div>
-  <div class="images col-sm-6 text-center">
-  
-      <div class="text-center title"></div>
-
-
-    </div>
-    
-    </div>
-    
-    
     </div>
   </div>
 
@@ -70,7 +133,7 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
-
+  <script src="assets/javascript/random.js"></script>
   <script src="assets/javascript/trend.js"></script>
   <script src="assets/javascript/script.js"></script>
 </body>
