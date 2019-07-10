@@ -9,10 +9,10 @@ $(document).ready(() => {
 
       let giphySearch = data.data;
       for (let i = 0; i < giphySearch.length; i++) {
-        console.log('loop is ' + giphySearch[i].images.original.url);
+        console.log('image is from script is ' + giphySearch[i].images.original.url);
         let image = $("<img class='mb-2'>").attr("src", giphySearch[i].images.original.url);
         let titleDisplay = giphySearch[i].title;
-        let title = $("<h3 class='mb-2'>").html(titleDisplay);
+        let title = $("<h5 class='mb-2'>").html(titleDisplay);
         console.log('title: ' + giphySearch[i].title);
 
 
