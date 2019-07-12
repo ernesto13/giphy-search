@@ -21,6 +21,8 @@ $(document).ready( () => {
       let randomGiphyTitle = randomGiphy.title;
 //         let randomTitle = $("#random").html(randomGiphyTitle);
       console.log('random giphy title:' + randomGiphy.title)
+      console.log(' source: ' + data.data.source);
+      console.log('url path: ' + randomGiphy.source);
       
       let giphDiv = $("<div class='card giphs'>");
         giphDiv.prepend(randomGiphyTitle);

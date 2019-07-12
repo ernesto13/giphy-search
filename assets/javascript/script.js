@@ -1,5 +1,6 @@
 $(document).ready(() => {
-
+  let searchCard = $('.search-card');
+ searchCard.hide();
   function gilphSearch(giph, searchNumber) {
     const API = 'RlvbFBFttCunUi82u3dfGWd6AKeGCWZ8';
     
@@ -32,6 +33,7 @@ $(document).ready(() => {
 
   searchGiph.on("click", function(e) {
     e.preventDefault();
+    searchCard.show();
     let searchYourGiph = $("#search-giph").val().trim();
     let searchYourNumber =$('#number-giph').val().trim();
     console.log(searchYourGiph, searchYourNumber);

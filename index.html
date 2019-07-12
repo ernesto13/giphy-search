@@ -23,7 +23,7 @@
 
 
   <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="#">Giphy Search</a>
+    <a class="navbar-brand" href="#"><i class="fas fa-images"></i> Giphy Search</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,8 +36,8 @@
           Get Giphs
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a id="randomGiphBtn" class="dropdown-item" href="#">Random</a>
-            <a id="trendingGiphBtn" class="dropdown-item" href="#">Trending</a>
+            <a id="randomGiphBtn" class="dropdown-item" href="#">Get a Random Gif</a>
+            <a id="trendingGiphBtn" class="dropdown-item" href="#">Trending Gif's</a>
             
           </div>
         </li>
@@ -53,24 +53,22 @@
 
   <!--  end of navbar  -->
 
+  <div class="container mx-auto">
 
-
-
-
-  <div class="container mx-auto mt-5">
-
-    <div class="container">
-      <div class="row">
-
-        
-        
-        
-<!--     for search card     -->
-        
-        
-         <div class="card mb-3">
+   
+<!--       <div class=""> -->
+                    <!--     for search card     -->
+       
+         <div class="card mb-3 col-sm-12 col-md-6 col-lg-6 mx-auto search-card">
           <!--   <img id="random" class="card-img-top"> -->
           <div  class="images text-center h3"></div>
+           
+           <div class="card-body">
+            <h5 class="card-title images-title text-center"></h5>
+                <p id="source-path" class="card-text text-center">Search Giph</p>
+            <!--     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          </div>
+           
 <!--           <div class="card-body col-sm-8"> -->
             <h5 class="card-title title text-center"></h5>
             <!--     <p class="card-text text-center">Random Giph</p> -->
@@ -79,50 +77,40 @@
         </div>
         
         
-        
-<!--         <div class="images col-sm-8 text-center">
-
-          <div class="text-center title"></div>
-
-
-        </div> -->
-        
-        
-        
 <!--     end of search card     -->
-        <hr/>
+  
 
         <!-- for random -->
-        <!--         <div id="random" class="random text-center h3"></div> -->
-        <!--         <div class="random text-center"> -->
+    
 
-
-        <div class="card mb-3">
-          <!--   <img id="random" class="card-img-top"> -->
+        <div class="card mb-3 col-sm-12 col-md-8 col-lg-6 mx-auto">
+   
           <div id="random" class="random text-center h3"></div>
-          <div class="card-body col-sm-8">
+          <div class="card-body">
             <h5 class="card-title random-title text-center"></h5>
-            <!--     <p class="card-text text-center">Random Giph</p> -->
+                <p id="source-path" class="card-text text-center">Random Giph</p>
             <!--     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
           </div>
         </div>
 
         <hr>
 
-        <!--     for random card end       -->
-
+        <!--     for trending card end       -->
+         <div class="card mb-3 col-sm-12 col-md-6 col-lg-6 mx-auto trending-card">
+           
         <div id="trendTitle" class="trending text-center h3"></div>
+           <div class="card-body">
+            <h5 class="card-title trend-title text-center"></h5>
+                <p id="source-path" class="card-text text-center">Trending Giph</p>
+            <!--     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          </div>
+           
         <div class="trending text-center"></div>
 
-
-      </div>
-
-
-    </div>
+        </div>
+<!--       </div> -->
+ 
   </div>
-
-
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

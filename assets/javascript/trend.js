@@ -1,4 +1,7 @@
 $(document).ready( () => {
+  let trendingCard = $('.trending-card');
+  trendingCard.hide();
+  
   function trendingGiph() {
     
     var xhr = $.get("https://api.giphy.com/v1/gifs/trending?api_key=RlvbFBFttCunUi82u3dfGWd6AKeGCWZ8&limit=25&rating=Y");
@@ -9,7 +12,7 @@ $(document).ready( () => {
         console.log('trend: ', trendGiphy[j]);
         let trendingImage = $("<img class='mb-2'>").attr("src", trendGiphy[j].images.original.url);
         let trendTitle = $('#trendTitle').html("Trending");
-        let giphDiv = $("<div class='giphs'>");
+        let giphDiv = $("<div class='giphs card'>");
         giphDiv.prepend(trendTitle);
         giphDiv.append(trendingImage);
         $(".trending").prepend(giphDiv);
@@ -25,6 +28,7 @@ $(document).ready( () => {
    let trendGiph = $('#trendingGiphBtn');
 
   trendGiph.on("click", function() {
+    trendingCard.show();
 //     e.preventDefault();
     trendingGiph();
     
