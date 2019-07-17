@@ -47,7 +47,7 @@ $(document).ready(() => {
   $(document).on('click', '.stillRandom', pausePlayRandomGif)
 
   function pausePlayRandomGif() {
-    var state = $(this).attr("data-state");
+    let state = $(this).attr("data-state");
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
       $(this).attr("data-state", "animate");

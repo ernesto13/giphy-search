@@ -48,7 +48,7 @@ $(document).ready(() => {
   $(document).on('click', '.stillTrend', pausePlayTrendGif)
 
   function pausePlayTrendGif() {
-    var state = $(this).attr("data-state");
+    let state = $(this).attr("data-state");
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
       $(this).attr("data-state", "animate");
@@ -66,7 +66,6 @@ $(document).ready(() => {
 
   trendGiph.on("click", function() {
     trendingCard.show();
-    //     e.preventDefault();
     trendingGiph();
 
   });
