@@ -14,16 +14,33 @@ $(document).ready(() => {
       let giphySearch = data.data;
       for (let i = 0; i < giphySearch.length; i++) {
         console.log('image is from script is ' + giphySearch[i].images.original.url);
-        let image = $("<img class='mb-3' style= 'height: 350px'>").attr("src", giphySearch[i].images.original.url);
-
+ 
         let titleDisplay = giphySearch[i].title;
         let title = $("<h5 class='mb-2'>").html(titleDisplay);
         console.log('title: ' + giphySearch[i].title);
-        //  style= 'width: 300px; height: 250px'
+
+        //         for still and animated 
+
+
+        let imageAnimated = giphySearch[i].images.original.url;
+        let staticSource = giphySearch[i].images.original_still.url;
+        let showImageGif = $("<img style= 'height: 350px'>");
+
+
+        showImageGif.attr('src', staticSource);
+        showImageGif.attr('data-state', 'still');
+        showImageGif.attr('data-still', staticSource);
+        showImageGif.attr('data-animate', imageAnimated)
+        showImageGif.addClass('stillSearch');
+
+
+
+        //         end of still animated gifs
+
 
         let giphDiv = $("<div class='giphs card'>");
         giphDiv.prepend(title);
-        giphDiv.append(image);
+        giphDiv.append(showImageGif);
         $(".images").append(giphDiv);
 
         console.log("success got data", data);
@@ -32,6 +49,24 @@ $(document).ready(() => {
     });
 
   }
+
+
+  //   here is the function to pause and plya gifs
+  $(document).on('click', '.stillSearch', pausePlaySearchGif)
+
+  function pausePlaySearchGif() {
+    var state = $(this).attr("data-state");
+    if (state === "still") {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    } else {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", "still");
+    }
+  }
+
+
+  //   end of pause play function
 
   //   scroll button
 
