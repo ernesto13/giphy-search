@@ -21,9 +21,8 @@
 <body>
   <!--  navbar  -->
 
-
-  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="#"><i class="fas fa-images"></i> Giphy Search</a>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="#"><i class="fas fa-images"></i> GifSeek</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -44,8 +43,8 @@
 
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input type="text" class="form-control mr-2" id="search-giph" placeholder="Search Giphy" required>
-        <input id="number-giph" class="form-control mr-sm-2" type="search" placeholder="# of giphs" aria-label="Search">
+        <input type="text" class="form-control mr-sm-2" id="search-giph" placeholder="Search Giphy" required>
+        <input id="number-giph" class="form-control mr-sm-2" type="search" placeholder="# of giphs" aria-label="Search" required>
         <button id="searchGiph" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
@@ -55,62 +54,63 @@
 
   <div class="container mx-auto">
 
-   
-<!--       <div class=""> -->
                     <!--     for search card     -->
        
-         <div class="card mb-3 col-sm-12 col-md-6 col-lg-6 mx-auto search-card">
-          <!--   <img id="random" class="card-img-top"> -->
-          <div  class="images text-center h3"></div>
+
+          <div  class="images text-center h3 mb-3 col-sm-12 col-md-6 col-lg-7 mx-auto search-card"></div>
            
-           <div class="card-body">
+<!--            <div class="card-body">
             <h5 class="card-title images-title text-center"></h5>
-                <p id="source-path" class="card-text text-center">Search Giph</p>
+<!--                 <p id="source-path" class="card-text text-center">Search Giph</p> -->
             <!--     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-          </div>
+     
            
 <!--           <div class="card-body col-sm-8"> -->
-            <h5 class="card-title title text-center"></h5>
+<!--             <h5 class="card-title title text-center"></h5>  -->
             <!--     <p class="card-text text-center">Random Giph</p> -->
             <!--     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
 <!--           </div> -->
-        </div>
+<!--         </div> -->
         
         
 <!--     end of search card     -->
   
 
         <!-- for random -->
-    
-
-        <div class="card mb-3 col-sm-12 col-md-8 col-lg-6 mx-auto">
-   
-          <div id="random" class="random text-center h3"></div>
-          <div class="card-body">
+          <div id="random" class="random text-center h3 col-sm-12 col-md-6 col-lg-7 mx-auto random-card mb-3"></div>
+<!--           <div class="card-body">
             <h5 class="card-title random-title text-center"></h5>
-                <p id="source-path" class="card-text text-center">Random Giph</p>
+<!--                 <p id="source-path" class="card-text text-center">Random Giph</p> -->
             <!--     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-          </div>
-        </div>
+<!--           </div> -->
+<!--         </div> -->
 
-        <hr>
+       
 
         <!--     for trending card end       -->
-         <div class="card mb-3 col-sm-12 col-md-6 col-lg-6 mx-auto trending-card">
-           
-        <div id="trendTitle" class="trending text-center h3"></div>
-           <div class="card-body">
+<!--          <div class="card mb-3 col-sm-12 col-md-6 col-lg-6 mx-auto trending-card"> -->
+<!--            
+        <div id="trendTitle" class="trending text-center h3 mb-3 col-sm-12 col-md-6 col-lg-6 mx-auto trending-card"></div> -->
+<!--            <div class="card-body">
             <h5 class="card-title trend-title text-center"></h5>
-                <p id="source-path" class="card-text text-center">Trending Giph</p>
+<!--                 <p id="source-path" class="card-text text-center"></p> -->
             <!--     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
           </div>
            
-        <div class="trending text-center"></div>
+        <div class="trending text-center h3 mb-3 col-sm-12 col-md-6 col-lg-7 mx-auto trending-card"></div>
 
-        </div>
+<!--         </div> -->
 <!--       </div> -->
  
-  </div>
+  <!--  back to top button   -->
+    
+    <i id="scroll-up-btn" class="far fa-caret-square-up fa-3x"></i>
+<!--     <i class="fas fa-caret-square-up"></i> -->
+    
+<!--  end of back to top    -->
+  
+  
+  
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

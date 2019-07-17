@@ -2,12 +2,21 @@ img {
   height: 200px;
   width: 100%;
 }
+
 nav {
   margin-bottom: 30px;
 }
+
 .container {
   margin-top: 30px;
 }
+
+#scroll-up-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
 /* .random {
   width:100%;
 } */
