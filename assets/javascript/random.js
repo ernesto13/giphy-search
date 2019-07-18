@@ -4,9 +4,6 @@ $(document).ready(() => {
     var xhr = $.get("https://api.giphy.com/v1/gifs/random?api_key=RlvbFBFttCunUi82u3dfGWd6AKeGCWZ8&tag=&rating=Y");
     xhr.done(function(data) {
 
-
-      console.log('randomGiphy: ', data);
-
       let randomGiphy = data.data;
 
       let randomGiphyTitle = randomGiphy.title;

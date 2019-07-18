@@ -104,7 +104,6 @@ $(document).ready(() => {
     let searchYourGiph = $("#search-giph").val().trim();
     let searchYourNumber = $('#number-giph').val().trim();
     console.log(searchYourGiph, searchYourNumber);
-
     gilphSearch(searchYourGiph, searchYourNumber);
     $("#search-giph").val("");
     $('#number-giph').val('');
